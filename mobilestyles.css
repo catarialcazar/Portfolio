@@ -1,67 +1,4 @@
 /*--------------------------------------------------------------
-# Responsive? Never heard of her
---------------------------------------------------------------*/
-.hidepc {
-    opacity: 0;
-    display: none;
-    transition: opacity 2s ease-in;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-/*--------------------------------------------------------------
-# Loading screen
---------------------------------------------------------------*/
-main {
-    opacity: 0;
-    display: none;
-    transition: opacity 2s ease-in;
-}
-
-.loadingcontainer {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-}
-
-.loader {
-    animation: rotate 3s linear infinite;
-    height: 50px;
-    transform-origin: bottom center;
-    position: absolute;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.circle {
-    animation: grow 1.5s linear infinite;
-    background-color: #9bb2f2;
-    border-radius: 50%;
-    display: inline-block;
-    margin: -10px;
-    height: 40px;
-    width: 40px;
-    transform: scale(0);
-}
-
-.circle:nth-of-type(2) {
-    animation-delay: 0.75s;
-    background-color: #f0809e;
-}
-
-@keyframes grow {
-    50% {
-        transform: scale(1);
-    }
-}
-
-
-/*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 @font-face {
@@ -97,19 +34,95 @@ p {
     text-align: justify;
 }
 
-h2 {
-    color: #9db6f1;
-}
-
 a {
     color: #fff;
     text-decoration: none;
     font: 1.5rem "Gothambold";
 }
 
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+.navbar {
+    background-color: #9db6f1;
+}
+
+.navbar a{
+    color: #9db6f1;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.active-custom{
+    color: #9db6f1;
+    opacity: .5;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.header-container {
+    background-image: url(img/Header-bg.png);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding-top: 12vh;
+}
+
+.banner-effect h2 {
+    font-size: 7vh;
+    position: absolute;
+    top: 15vh;
+    left: 10vw;
+    z-index: 1;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-name: slideInRight;
+}
+
+.banner-effect .p_img {
+    display: block;
+    width: auto;
+    height: 60vh;
+    position: absolute;
+    top: 35%;
+    left: -10%;
+    z-index: 5;
+    animation-duration: 1.2s;
+    animation-fill-mode: both;
+    animation-name: fadeInLeft;
+}
+
+.banner-effect .page-scroll {
+    display: block;
+    position: absolute;
+    font-size: 2rem;
+    letter-spacing: 0.313rem;
+    top: 22rem;
+    left: 12%;
+    background-color: #fff;
+    color: #9db6f1;
+    z-index: 10;
+    animation-duration: 1.8s;
+    animation-fill-mode: both;
+    animation-name: slideInRight;
+    transition: 0.5s;
+    animation-delay: 1s;
+}
+
+.banner-effect .page-scroll:hover {
+    top: 22.3rem;
+    color: #f2a0ae;
+}
+
 /*****************************************/
 /*         Titles decoration             */
 /*****************************************/
+
+h2 {
+    color: #9db6f1;
+    font-size: 2.5rem !important;
+}
 
 .bullet-custom,
 .bullet-custom2,
@@ -118,14 +131,13 @@ a {
     list-style-type: "✦";
     width: 10%;
     position: relative;
-    top: 9rem;
-    left: 3rem;
+    top: 8rem;
+    left: 2rem;
     z-index: 20;
 }
 
 .bullet-custom2 {
-    top: 6.5rem;
-    left: 2.5rem;
+    top: 5.5rem;
     z-index: 20;
 }
 
@@ -145,7 +157,7 @@ a {
 hr {
     border: 2px solid #9db6f1;
     opacity: 1;
-    width: 25rem;
+    width: 50vw;
     margin: 0;
     margin-bottom: 3rem;
     margin-left: 3rem;
@@ -155,79 +167,14 @@ hr {
 #hr2 {
     border: 2px solid #fff;
     opacity: 1;
-    width: 25rem;
-    margin: 0;
+    width: 50vw;
+    margin-left: 25%;
     margin-bottom: 2.5rem;
     border-radius: 5px;
 }
 
-/*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-.navbar-links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
-.navbar {
-    height: 100vh;
-    background-color: #9db6f1;
-}
 
-/*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
-.header-container {
-    background-image: url(img/Header-bg.png);
-    background-size: cover;
-    height: 100vh;
-    padding-top: 12vh;
-}
-
-.banner-effect h2 {
-    position: absolute;
-    top: 7rem;
-    left: 10vw;
-    z-index: 10;
-    animation-duration: 1.2s;
-    animation-fill-mode: both;
-    animation-name: slideInRight;
-}
-
-.banner-effect .p_img {
-    display: block;
-    width: auto;
-    height: 46vw;
-    position: absolute;
-    top: 1.875rem;
-    right: 1.25rem;
-    z-index: 20;
-    animation-duration: 1.2s;
-    animation-fill-mode: both;
-    animation-name: fadeInLeft;
-}
-
-.banner-effect .page-scroll {
-    display: block;
-    position: absolute;
-    font-size: 2rem;
-    letter-spacing: 0.313rem;
-    top: 22rem;
-    left: 12%;
-    background-color: #fff;
-    color: #9db6f1;
-    z-index: 10;
-    animation-duration: 1.2s;
-    animation-fill-mode: both;
-    animation-name: slideInRight;
-    transition: 0.5s;
-}
-
-.banner-effect .page-scroll:hover {
-    top: 22.3rem;
-    color: #f2a0ae;
-}
 
 /*****************************************/
 /*             Animation                 */
@@ -451,26 +398,18 @@ h5 {
     color: #fff;
 }
 
-.cv-btn:hover {
-    background-color: #f2a0ae;
-    color: #fff;
-}
-
 #skills2 .progress-bar {
     background-color: #F19DB6;
 }
-
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 
 .bg-custom {
-    margin: auto;
     background-image: url(img/contact-bg.png);
     background-repeat: no-repeat;
-    border-radius: 40px;
 }
 
 h6 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
