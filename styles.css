@@ -9,52 +9,12 @@
     justify-content: center;
     align-items: center;
   }
-/*--------------------------------------------------------------
-# Loading screen
---------------------------------------------------------------*/
-
-.loadingcontainer {
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+  
+main {
+    opacity: 0;
+    display: none;
+    transition: opacity 2s ease-in;
 }
-
-.loader {
-    animation: rotate 3s linear infinite;
-    height: 50px;
-    transform-origin: bottom center;
-    position: absolute;
-}
-
-@keyframes rotate {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-.circle {
-    animation: grow 1.5s linear infinite;
-    background-color: #9bb2f2;
-    border-radius: 50%;
-    display: inline-block;
-    margin: -10px;
-    height: 40px;
-    width: 40px;
-    transform: scale(0);
-}
-
-.circle:nth-of-type(2) {
-    animation-delay: 0.75s;
-    background-color: #f0809e;
-}
-
-@keyframes grow {
-    50% {
-        transform: scale(1);
-    }
-}
-
 
 /*--------------------------------------------------------------
 # General
