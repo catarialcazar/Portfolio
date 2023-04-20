@@ -1,5 +1,5 @@
 // // Loader:
-const loadingContainer = document.querySelector('.loadingContainer');
+const loadingcontainer = document.querySelector('.loadingcontainer');
 const main = document.querySelector('main');
 
 window.onload = function () {
@@ -8,8 +8,8 @@ window.onload = function () {
 
 function init() {
     setTimeout(() => {
-        loadingContainer.style.opacity = 0;
-        loadingContainer.style.display = 'none';
+        loadingcontainer.style.opacity = 0;
+        loadingcontainer.style.display = 'none';
 
         main.style.display = 'block';
         setTimeout(() => main.style.opacity = 1, 16);
