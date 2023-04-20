@@ -3,9 +3,9 @@ var w = document.documentElement.clientWidth || window.innerWidth;
 const hidepc = document.querySelector(".hidepc");
 const main = document.querySelector("main");
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", function() {
     init();
-};
+});
 
 function init() {
     if (w <= 680) {
